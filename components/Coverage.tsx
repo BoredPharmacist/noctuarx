@@ -13,7 +13,8 @@ export default function Coverage() {
     <section id="coverage" className="py-24 px-6 bg-[#0c0f1a]">
       <div className="section-divider mb-0" />
       <div className="max-w-7xl mx-auto pt-24">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+
+        <div className="flex flex-col lg:flex-row gap-16 items-center mb-16">
           <div className="flex-1">
             <span className="pill mb-6 inline-flex">Specialized Offering</span>
             <h2 className="text-white mb-6 leading-tight"
@@ -36,40 +37,55 @@ export default function Coverage() {
             </a>
           </div>
 
-          <div className="flex-1 max-w-lg flex flex-col gap-4">
-            <div className="rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-8">
-              <p className="text-xs uppercase tracking-widest mb-6 text-[#2d6fd4]" style={{ letterSpacing: "0.12em" }}>
-                Coverage Scenarios
-              </p>
-              <ul className="flex flex-col gap-3">
-                {coverageItems.map((item, i) => (
-                  <li key={i} className="check-item">
-                    <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#1a2d14] flex items-center justify-center">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d="M2 5l2 2 4-4" stroke="#5aaa35" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-6 flex flex-col gap-3">
-              <p className="text-xs uppercase tracking-widest text-[#5aaa35]" style={{ letterSpacing: "0.12em" }}>
-                Remote Order Entry & Verification
-              </p>
-              <p className="text-white font-semibold" style={{ fontFamily: "'Sora', sans-serif" }}>
-                Extend your local pharmacy team&apos;s resources
-              </p>
-              <p className="text-[#7a8499] text-sm leading-relaxed">
-                We centralize medication order reviews and approvals to drive patient safety,
-                HIPAA compliance, and quality monitoring — freeing your staff to concentrate
-                on integrated, emergent care.
-              </p>
+          <div className="flex-1 max-w-md w-full hidden lg:block">
+            <div className="relative rounded-2xl overflow-hidden"
+              style={{ aspectRatio: "4/3", boxShadow: "0 0 60px rgba(30,79,163,0.15), 0 0 0 1px rgba(30,79,163,0.1)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/stock2.png"
+                alt="Pharmacist providing remote clinical support"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+              />
+              <div className="absolute inset-0 pointer-events-none"
+                style={{ background: "linear-gradient(135deg, rgba(30,79,163,0.15) 0%, transparent 60%)" }} />
             </div>
           </div>
         </div>
+
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="flex-1 rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-8">
+            <p className="text-xs uppercase tracking-widest mb-6 text-[#2d6fd4]" style={{ letterSpacing: "0.12em" }}>
+              Coverage Scenarios
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {coverageItems.map((item, i) => (
+                <li key={i} className="check-item">
+                  <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#1a2d14] flex items-center justify-center">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5l2 2 4-4" stroke="#5aaa35" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="lg:w-80 rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-6 flex flex-col gap-3">
+            <p className="text-xs uppercase tracking-widest text-[#5aaa35]" style={{ letterSpacing: "0.12em" }}>
+              Remote Order Entry & Verification
+            </p>
+            <p className="text-white font-semibold" style={{ fontFamily: "'Sora', sans-serif" }}>
+              Extend your local pharmacy team&apos;s resources
+            </p>
+            <p className="text-[#7a8499] text-sm leading-relaxed">
+              We centralize medication order reviews and approvals to drive patient safety,
+              HIPAA compliance, and quality monitoring — freeing your staff to concentrate
+              on integrated, emergent care.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   );
