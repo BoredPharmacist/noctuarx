@@ -12,6 +12,7 @@ export default function Stats() {
       <div className="max-w-7xl mx-auto pt-24">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
 
+          {/* Left — stats */}
           <div className="flex-1">
             <h2 className="text-white leading-tight mb-6"
               style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: "clamp(2rem, 4vw, 2.8rem)", letterSpacing: "-0.02em" }}>
@@ -36,9 +37,11 @@ export default function Stats() {
             </span>
           </div>
 
+          {/* Right — image + why panel stacked */}
           <div className="flex-1 max-w-lg flex flex-col gap-5">
 
-            <div className="relative rounded-2xl overflow-hidden hidden lg:block"
+            {/* stock3 image */}
+            <div className="relative rounded-2xl overflow-hidden"
               style={{ aspectRatio: "16/9", boxShadow: "0 0 60px rgba(30,79,163,0.15), 0 0 0 1px rgba(30,79,163,0.1)" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -50,6 +53,7 @@ export default function Stats() {
                 style={{ background: "linear-gradient(to bottom, transparent 50%, rgba(12,15,26,0.7))" }} />
             </div>
 
+            {/* Why NetLinkRx panel */}
             <div className="rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-8">
               <div className="flex items-center justify-between mb-6">
                 <p className="text-white font-semibold" style={{ fontFamily: "'Sora', sans-serif" }}>Why NetLinkRx?</p>

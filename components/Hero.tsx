@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
 
           {/* Right — image */}
-          <div className="fade-up fade-up-delay-3 flex-1 max-w-lg w-full hidden lg:block">
+          <div className="fade-up fade-up-delay-3 flex-1 max-w-lg w-full">
             <div className="relative rounded-2xl overflow-hidden"
               style={{ aspectRatio: "4/5", boxShadow: "0 0 80px rgba(30,79,163,0.2), 0 0 0 1px rgba(30,79,163,0.15)" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -62,8 +62,10 @@ export default function Hero() {
                 alt="Clinical pharmacist providing remote telepharmacy services"
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
               />
+              {/* Dark overlay fade at bottom */}
               <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
                 style={{ background: "linear-gradient(to bottom, transparent, rgba(7,9,15,0.8))" }} />
+              {/* Blue left edge glow */}
               <div className="absolute inset-0 pointer-events-none"
                 style={{ boxShadow: "inset 0 0 40px rgba(30,79,163,0.15)" }} />
             </div>
@@ -72,6 +74,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none"
         style={{ background: "linear-gradient(to bottom, transparent, #07090f)" }} />
     </section>

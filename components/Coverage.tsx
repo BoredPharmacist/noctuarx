@@ -14,6 +14,7 @@ export default function Coverage() {
       <div className="section-divider mb-0" />
       <div className="max-w-7xl mx-auto pt-24">
 
+        {/* Top row — text left, image right */}
         <div className="flex flex-col lg:flex-row gap-16 items-center mb-16">
           <div className="flex-1">
             <span className="pill mb-6 inline-flex">Specialized Offering</span>
@@ -37,7 +38,8 @@ export default function Coverage() {
             </a>
           </div>
 
-          <div className="flex-1 max-w-md w-full hidden lg:block">
+          {/* stock2 image */}
+          <div className="flex-1 max-w-md w-full">
             <div className="relative rounded-2xl overflow-hidden"
               style={{ aspectRatio: "4/3", boxShadow: "0 0 60px rgba(30,79,163,0.15), 0 0 0 1px rgba(30,79,163,0.1)" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -52,6 +54,7 @@ export default function Coverage() {
           </div>
         </div>
 
+        {/* Bottom row — coverage list + sub-card */}
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="flex-1 rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-8">
             <p className="text-xs uppercase tracking-widest mb-6 text-[#2d6fd4]" style={{ letterSpacing: "0.12em" }}>
