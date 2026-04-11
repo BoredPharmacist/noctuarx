@@ -23,50 +23,33 @@ const steps = [
 
 export default function HowWeWork() {
   return (
-    <section id="process" className="py-28 px-6">
-      <div className="section-divider mb-28" />
+    <section id="process" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-16">
           <h2
-            className="text-white mb-3"
-            style={{
-              fontFamily: "'Sora', sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(1.8rem, 4vw, 2.4rem)",
-            }}
+            className="mb-3"
+            style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: "clamp(1.8rem, 4vw, 2.4rem)", color: "#0f1c35" }}
           >
             How We Work
           </h2>
-          <p className="text-[#8b93a8]">
-            A rigorous, clinician-led approach to deploying remote pharmacy services.
-          </p>
+          <p style={{ color: "#5a6a85" }}>A rigorous, clinician-led approach to deploying remote pharmacy services.</p>
         </div>
 
-        {/* Divider line */}
-        <div className="h-px bg-[#1a1c2e] mb-12" />
+        <div className="h-px mb-12" style={{ background: "#dde4ef" }} />
 
-        {/* Steps */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {steps.map((s) => (
             <div key={s.num} className="flex flex-col gap-4">
               <span
-                className="text-[#1e2035] font-bold select-none leading-none"
-                style={{
-                  fontFamily: "'Sora', sans-serif",
-                  fontWeight: 800,
-                  fontSize: "clamp(3.5rem, 6vw, 5rem)",
-                }}
+                className="font-bold select-none leading-none"
+                style={{ fontFamily: "'Sora', sans-serif", fontWeight: 800, fontSize: "clamp(3.5rem, 6vw, 5rem)", color: "#e8eef9" }}
               >
                 {s.num}
               </span>
-              <h3
-                className="text-white font-semibold text-lg"
-                style={{ fontFamily: "'Sora', sans-serif" }}
-              >
+              <h3 className="font-semibold text-lg" style={{ fontFamily: "'Sora', sans-serif", color: "#0f1c35" }}>
                 {s.title}
               </h3>
-              <p className="text-[#6b7280] text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-sm leading-relaxed" style={{ color: "#5a6a85" }}>{s.desc}</p>
             </div>
           ))}
         </div>

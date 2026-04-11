@@ -7,7 +7,7 @@ const services = [
       </svg>
     ),
     title: "Remote Order Entry & Verification",
-    desc: "Centralized medication order review and approval by board-certified pharmacists. We drive patient safety, HIPAA compliance, and quality monitoring so your onsite team can focus on emergent clinical needs.",
+    desc: "Centralized medication order review and approval by board-certified pharmacists — driving patient safety, HIPAA compliance, and quality monitoring so your onsite team focuses on emergent clinical needs.",
   },
   {
     icon: (
@@ -17,7 +17,7 @@ const services = [
       </svg>
     ),
     title: "24/7 Pharmacist Availability",
-    desc: "Round-the-clock clinical pharmacist coverage for overnight, weekend, peak hours, callouts, leaves of absence, and emergency situations — without the FTE cost.",
+    desc: "Round-the-clock clinical pharmacist coverage for overnight, weekend, peak hours, callouts, leaves of absence, and emergencies — without the FTE cost.",
   },
   {
     icon: (
@@ -51,53 +51,35 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 px-6">
+    <section id="services" className="py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section header */}
         <div className="text-center mb-16">
           <span className="pill mb-5 inline-flex">Core Services</span>
           <h2
-            className="text-white mb-4"
-            style={{
-              fontFamily: "'Sora', sans-serif",
-              fontWeight: 700,
-              fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
-            }}
+            className="mb-4"
+            style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: "clamp(1.8rem, 4vw, 2.6rem)", color: "#0f1c35" }}
           >
             Clinical Telepharmacy, Built for
             <br />
-            Underserved Facilities
+            <span style={{ color: "#1e4fa3" }}>Underserved Facilities</span>
           </h2>
-          <p className="text-[#8b93a8] max-w-xl mx-auto leading-relaxed">
-            From order verification to specialized clinical programs — NoctuaRx
+          <p className="max-w-xl mx-auto leading-relaxed" style={{ color: "#5a6a85" }}>
+            From order verification to specialized clinical programs — NetLinkRx
             operates as a seamless extension of your pharmacy team.
           </p>
         </div>
 
-        {/* Cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {services.map((s, i) => (
-            <div
-              key={i}
-              className="service-card rounded-xl border border-[#1a1c2e] bg-[#0d0e1a] p-6 flex flex-col gap-4 cursor-default"
-            >
-              {/* Icon box */}
-              <div className="w-10 h-10 rounded-lg bg-[#1a1c2e] flex items-center justify-center text-[#4a9eff]">
+            <div key={i} className="service-card rounded-xl border bg-white p-6 flex flex-col gap-4 cursor-default" style={{ borderColor: "#dde4ef" }}>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "#e8eef9", color: "#1e4fa3" }}>
                 {s.icon}
               </div>
-              <h3
-                className="text-white font-semibold leading-snug"
-                style={{ fontFamily: "'Sora', sans-serif", fontSize: "0.95rem" }}
-              >
+              <h3 className="font-semibold leading-snug" style={{ fontFamily: "'Sora', sans-serif", fontSize: "0.95rem", color: "#0f1c35" }}>
                 {s.title}
               </h3>
-              <p className="text-[#6b7280] text-sm leading-relaxed flex-1">
-                {s.desc}
-              </p>
-              <a
-                href="#contact"
-                className="text-[#4a9eff] text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all"
-              >
+              <p className="text-sm leading-relaxed flex-1" style={{ color: "#5a6a85" }}>{s.desc}</p>
+              <a href="#contact" className="text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all" style={{ color: "#5aaa35" }}>
                 Learn more
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M3 7H11M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
