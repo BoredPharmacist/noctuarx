@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,23 +19,13 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-[#dde4ef] shadow-sm"
-          : "bg-white border-b border-[#dde4ef]"
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? "bg-white/95 backdrop-blur-md border-b border-[#dde4ef] shadow-sm" : "bg-white border-b border-[#dde4ef]"
+    }`}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="NetLinkRx"
-            width={160}
-            height={48}
-            style={{ objectFit: "contain", height: "40px", width: "auto" }}
-            priority
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="NetLinkRx" style={{ height: "40px", width: "auto", objectFit: "contain" }} />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -45,12 +34,9 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
-          <a
-            href="#contact"
-            className="px-5 py-2 rounded-full bg-[#1e4fa3] text-white text-sm font-semibold hover:bg-[#163a7a] transition-all duration-200"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
-          >
+        <div className="hidden md:flex">
+          <a href="#contact"
+            className="px-5 py-2 rounded-full bg-[#1e4fa3] text-white text-sm font-semibold hover:bg-[#163a7a] transition-colors duration-200">
             Contact Us
           </a>
         </div>
@@ -71,11 +57,12 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-[#dde4ef] px-6 py-4 flex flex-col gap-4">
           {links.map((l) => (
-            <a key={l.label} href={l.href} className="text-[#5a6a85] hover:text-[#1e4fa3] text-sm font-medium py-1" onClick={() => setMenuOpen(false)}>
-              {l.label}
-            </a>
+            <a key={l.label} href={l.href} className="text-[#5a6a85] hover:text-[#1e4fa3] text-sm font-medium py-1"
+              onClick={() => setMenuOpen(false)}>{l.label}</a>
           ))}
-          <a href="#contact" className="mt-2 px-5 py-2.5 rounded-full bg-[#1e4fa3] text-white text-sm font-semibold text-center" onClick={() => setMenuOpen(false)}>
+          <a href="#contact"
+            className="mt-2 px-5 py-2.5 rounded-full bg-[#1e4fa3] text-white text-sm font-semibold text-center"
+            onClick={() => setMenuOpen(false)}>
             Contact Us
           </a>
         </div>
