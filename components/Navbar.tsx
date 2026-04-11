@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="NetLinkRx" style={{ height: "36px", width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }} />
+          <img src="/logo.png" alt="NetLinkRx" style={{ height: "42px", width: "auto", objectFit: "contain" }} />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
