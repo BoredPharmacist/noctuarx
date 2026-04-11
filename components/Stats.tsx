@@ -11,6 +11,7 @@ export default function Stats() {
       <div className="section-divider mb-0" />
       <div className="max-w-7xl mx-auto pt-24">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
+
           <div className="flex-1">
             <h2 className="text-white leading-tight mb-6"
               style={{ fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: "clamp(2rem, 4vw, 2.8rem)", letterSpacing: "-0.02em" }}>
@@ -21,7 +22,7 @@ export default function Stats() {
               bottom line. Our W-2 pharmacists average 10+ years of clinical hospital experience.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-12 gap-y-10">
+            <div className="grid grid-cols-2 gap-x-12 gap-y-10 mb-10">
               {stats.map((s, i) => (
                 <div key={i}>
                   <div className="stat-number mb-1">{s.value}</div>
@@ -30,22 +31,30 @@ export default function Stats() {
               ))}
             </div>
 
-            <div className="mt-10">
-              <span className="pill" style={{ borderColor: "rgba(90,170,53,0.35)", color: "#5aaa35", background: "rgba(90,170,53,0.08)" }}>
-                Trusted by Critical Access Hospitals
-              </span>
-            </div>
+            <span className="pill" style={{ borderColor: "rgba(90,170,53,0.35)", color: "#5aaa35", background: "rgba(90,170,53,0.08)" }}>
+              Trusted by Critical Access Hospitals
+            </span>
           </div>
 
-          <div className="flex-1 max-w-lg">
+          <div className="flex-1 max-w-lg flex flex-col gap-5">
+
+            <div className="relative rounded-2xl overflow-hidden hidden lg:block"
+              style={{ aspectRatio: "16/9", boxShadow: "0 0 60px rgba(30,79,163,0.15), 0 0 0 1px rgba(30,79,163,0.1)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/stock3.png"
+                alt="Remote pharmacist reviewing medication orders"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+              />
+              <div className="absolute inset-0 pointer-events-none"
+                style={{ background: "linear-gradient(to bottom, transparent 50%, rgba(12,15,26,0.7))" }} />
+            </div>
+
             <div className="rounded-2xl border border-[#1a1f35] bg-[#0f1220] p-8">
               <div className="flex items-center justify-between mb-6">
                 <p className="text-white font-semibold" style={{ fontFamily: "'Sora', sans-serif" }}>Why NetLinkRx?</p>
                 <span className="pill text-[10px]" style={{ padding: "3px 10px" }}>Trusted</span>
               </div>
-              <p className="text-[#7a8499] text-sm leading-relaxed mb-6">
-                What sets us apart from traditional remote pharmacy staffing solutions.
-              </p>
               <ul className="flex flex-col gap-3">
                 {[
                   "W-2 clinical pharmacists — not contractors",
@@ -66,6 +75,7 @@ export default function Stats() {
                 ))}
               </ul>
             </div>
+
           </div>
         </div>
       </div>
