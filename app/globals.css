@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +6,6 @@
   --bg: #ffffff;
   --bg-alt: #f4f7fb;
   --bg-dark: #0e2a5c;
-  --surface: #ffffff;
   --border: #dde4ef;
   --blue: #1e4fa3;
   --blue-dark: #163a7a;
@@ -25,9 +22,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  background-color: #ffffff;
+  color: #0f1c35;
+  font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -55,17 +52,10 @@ body {
   border: 1px solid rgba(30,79,163,0.25);
   border-radius: 999px;
   font-size: 11px;
-  font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #1e4fa3;
   background: #e8eef9;
-}
-
-.pill-green {
-  border-color: rgba(90,170,53,0.3);
-  color: #3f7d25;
-  background: #eaf5e3;
 }
 
 .service-card {
